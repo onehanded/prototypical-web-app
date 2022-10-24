@@ -1,0 +1,8 @@
+{
+  /* This config is used by Jest which requires JSX code to be transpiled, whereas Next.js does not. */
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    /* Language and Environment */
+    "jsx": "react" /* Specify what JSX code is generated. */
+  }
+}
