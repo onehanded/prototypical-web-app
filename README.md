@@ -1,6 +1,7 @@
 # Prototypical Web Application using Next.js
 
 This web app template is based on React and Next.js for hybrid static & server rendering.
+Click [here](https://prototypical-web-app.vercel.app/) to see it running on Vercel.
 
 It is configured with [Typescript](https://www.typescriptlang.org/), [Eslint](https://eslint.org/) &
 [Prettier](https://prettier.io/) for type safety and code consistency.
@@ -8,6 +9,9 @@ It is configured with [Typescript](https://www.typescriptlang.org/), [Eslint](ht
 It uses [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/) for unit testing.
 
 It uses [Husky](https://typicode.github.io/husky/) to run eslint/prettier/jest as a pre-commit hook.
+
+**WARNING: This app uses the Next.js [/app directory](https://nextjs.org/blog/next-13#new-app-directory-beta) 
+that is currently in beta.**
 
 ## Get started
 
