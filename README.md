@@ -6,6 +6,8 @@ Click [here](https://prototypical-web-app.vercel.app/) to see it running on Verc
 It is configured with [Typescript](https://www.typescriptlang.org/), [Eslint](https://eslint.org/) &
 [Prettier](https://prettier.io/) for type safety and code consistency.
 
+It is configured with [MUI](https://mui.com/) and [Emotion](https://emotion.sh/) as the UI and CSS framework.
+
 It uses [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/) for unit testing.
 
 It uses [Husky](https://typicode.github.io/husky/) to run eslint/prettier/jest as a pre-commit hook.
@@ -38,6 +40,8 @@ and auto-format your code on save.
 - [Next.js](https://nextjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Eslint](https://eslint.org/)
+- [MUI](https://mui.com/)
+- [Emotion](https://emotion.sh/)
 - [Prettier](https://prettier.io/)
 - [Husky](https://typicode.github.io/husky/)
 - [Jest](https://jestjs.io/)

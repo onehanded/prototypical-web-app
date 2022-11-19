@@ -2,6 +2,8 @@
  * Root layout of the App.
  */
 import React from 'react';
+import EmotionProvider from './emotion-context';
+import ThemeProvider from './theme-context';
 
 /**
  * Root layout of the App.
@@ -15,9 +17,13 @@ export default function Layout({
   children: React.ReactNode;
 }): React.ReactElement {
   return (
-    <html lang="en">
+    <>
       <head />
-      <body style={{margin: 0}}>{children}</body>
-    </html>
+      <body>
+        <EmotionProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </EmotionProvider>
+      </body>
+    </>
   );
 }
