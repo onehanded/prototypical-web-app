@@ -33,6 +33,7 @@ const theme = createTheme({
   typography: {
     fontFamily: roboto.style.fontFamily,
   },
+  spacing: 8,
 });
 
 export default theme;

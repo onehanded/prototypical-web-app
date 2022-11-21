@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 /**
  * Root (home) page of the App.
  *
@@ -10,7 +9,7 @@
 'use client';
 
 import React from 'react';
-import {Typography} from '@mui/material';
+import {Box, Container, Link, Typography} from '@mui/material';
 
 /**
  * Root page.
@@ -20,10 +19,9 @@ import {Typography} from '@mui/material';
 export default function Page(): React.ReactElement {
   return (
     <>
-      <div
-        css={{
+      <Container
+        sx={{
           display: 'flex',
-          justifyContent: 'center',
           alignItems: 'center',
           height: '100vh',
         }}
@@ -31,22 +29,22 @@ export default function Page(): React.ReactElement {
         <Typography variant="h1">
           Welcome to the Prototypical Next.js Web App!
         </Typography>
-      </div>
-      <div
-        css={{
+      </Container>
+      <Box
+        sx={{
           position: 'absolute',
-          left: '0',
           bottom: '0',
+          pl: 1,
         }}
       >
-        <Typography variant="subtitle2">
+        <Typography variant="overline">
           WARNING: This app uses the Next.js&nbsp;
-          <a href="https://nextjs.org/blog/next-13#new-app-directory-beta">
+          <Link href="https://nextjs.org/blog/next-13#new-app-directory-beta">
             /app directory
-          </a>
+          </Link>
           &nbsp;that is currently in beta.
         </Typography>
-      </div>
+      </Box>
     </>
   );
 }
