@@ -2,8 +2,8 @@
  * Root layout of the App.
  */
 import React from 'react';
-import EmotionProvider from './emotion-context';
-import ThemeProvider from './theme-context';
+import EmotionProvider from './EmotionContext';
+import ThemeProvider from './ThemeContext';
 
 /**
  * Root layout of the App.

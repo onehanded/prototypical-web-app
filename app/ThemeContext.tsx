@@ -1,6 +1,10 @@
 /**
- * Wraps the [MUI](https://mui.com/) ThemeProvider as a client-side component
- * since MUI does not yet support Next.js /app directory.
+ * Wraps the [MUI](https://mui.com/) ThemeProvider as a client-side component.
+ *
+ * Currently MUI/Emotion does not support Next.js 13 /app directory:
+ *   https://github.com/mui/material-ui/issues/34905
+ *
+ * This component may need to change when support is added.
  */
 'use client';
 
