@@ -23,7 +23,7 @@ export default function Page(): React.ReactElement {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          height: '100vh',
+          minHeight: '100vh',
         }}
       >
         <Typography variant="h1">

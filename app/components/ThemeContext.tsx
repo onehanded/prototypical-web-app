@@ -9,9 +9,9 @@
 'use client';
 
 import React from 'react';
-import {ThemeProvider as Provider} from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import theme from './theme';
+import {CssBaseline} from '@mui/material';
+import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
+import theme from '../theme';
 
 /**
  * Sets up the theme for the App and uses the CssBaseline component to override
@@ -22,9 +22,9 @@ import theme from './theme';
  */
 export default function ThemeProvider({children}: {children: React.ReactNode}) {
   return (
-    <Provider theme={theme}>
+    <MuiThemeProvider theme={theme}>
       <CssBaseline />
       {children}
-    </Provider>
+    </MuiThemeProvider>
   );
 }

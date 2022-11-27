@@ -6,8 +6,11 @@
  * Instead, pass the document root as an option render() so it is rendered under
  * the <html> tag.
  *
- * The Layout component should not use the <html> tag, as this will generate
- * a similar error, making it hard to test this component.
+ * Because the Layout component should uses the <html> tag, these tests this will
+ * generate the following warnning:
+ *   <html> cannot appear as a child of <html>
+ *
+ * There does not seem to be any way to avoid this.
  */
 import React from 'react';
 import {describe, test} from '@jest/globals';

@@ -34,15 +34,4 @@ describe('Head', () => {
       ? expect(within(title).getByText(/prototypical/i)).toBeInTheDocument()
       : expect(title).toBeDefined();
   });
-
-  /*
-   *
-   */
-  test('it renders the emotion insertion point', () => {
-    const meta = result.container.querySelector(
-      'meta[name=emotion-insertion-point]'
-    );
-
-    expect(meta).toBeDefined();
-  });
 });
