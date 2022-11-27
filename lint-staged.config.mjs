@@ -33,7 +33,7 @@ export default {
    * Runs ESLint & Prettier on Javascript & Typescript files in the root
    * directory.
    */
-  './*.{js,jsx,ts,tsx}': (filenames) => {
+  './*.{js,mjs,jsx,ts,tsx}': (filenames) => {
     return [
       'eslint --fix ' + filenames.join(' '),
       'prettier --write ' + filenames.join(' '),
