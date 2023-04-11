@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023 One Handed Ventures, LLC
+ */
+
 /**
  * Root <head> tag of the App.
  */

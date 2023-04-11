@@ -1,7 +1,5 @@
-/**
- * Since this component renders the <title> and <meta> tags a <head> tag is
- * appended to the document root and this is used as an option to render() so
- * the tags are rendered under the <head> tag.
+/*
+ * Copyright (c) 2023 One Handed Ventures, LLC
  */
 import React from 'react';
 import {describe, test} from '@jest/globals';

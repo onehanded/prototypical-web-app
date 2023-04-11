@@ -1,10 +1,15 @@
+/*
+ * Copyright (c) 2023 One Handed Ventures, LLC
+ */
+
 /**
  * Root (home) page of the App.
  *
  * Currently MUI/Emotion components do not work with server-side components:
  *   https://github.com/mui/material-ui/issues/34905
+ *   https://github.com/emotion-js/emotion/issues/2928
  *
- * When this is fixed 'use client' can be removed.
+ * When (if) this is fixed 'use client' can be removed.
  */
 'use client';
 

@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023 One Handed Ventures, LLC
+ */
+
 /**
  * A styled version of the Next.js Link component:
  *   https://nextjs.org/docs/api-reference/next/link

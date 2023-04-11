@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023 One Handed Ventures, LLC
+ */
+
 /**
  * Since this component renders the <head> and <body> tags it cannot be tested
  * using the usual render() method, as this generates an error:

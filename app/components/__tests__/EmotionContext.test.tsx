@@ -1,5 +1,5 @@
-/**
- *
+/*
+ * Copyright (c) 2023 One Handed Ventures, LLC
  */
 import React from 'react';
 import {describe, jest, test} from '@jest/globals';

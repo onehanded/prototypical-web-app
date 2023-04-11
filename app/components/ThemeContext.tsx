@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2023 One Handed Ventures, LLC
+ */
+
 /**
  * Wraps the [MUI](https://mui.com/) ThemeProvider as a client-side component.
  *

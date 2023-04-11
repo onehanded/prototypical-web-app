@@ -10,6 +10,10 @@ import {useServerInsertedHTML} from 'next/navigation';
 import createCache from '@emotion/cache';
 import {CacheProvider} from '@emotion/react';
 
+/*
+ * Copyright (c) 2023 One Handed Ventures, LLC
+ */
+
 /**
  * Creates the Emotion client-side cache for the App and inserts styles into HTML.
  *

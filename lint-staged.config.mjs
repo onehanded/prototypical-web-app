@@ -1,4 +1,8 @@
 /*
+ * Copyright (c) 2023 One Handed Ventures, LLC
+ */
+
+/*
  * Configuration for lint-staged (https://github.com/okonet/lint-staged)
  *
  * Had to configure lint-staged this way rather than using package.json to
