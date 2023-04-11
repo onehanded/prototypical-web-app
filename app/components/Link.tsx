@@ -14,13 +14,13 @@ import MuiLink, {LinkProps as MuiLinkProps} from '@mui/material/Link';
  * Combines props from both the MUI and Next 'Link' components. Excludes the
  * 'component' prop since this is used to pass the Next 'Link' component.
  */
-export type LinkProps = NextLinkProps & Omit<MuiLinkProps, 'component'>;
+export type LinkProps<T> = NextLinkProps<T> & Omit<MuiLinkProps, 'component'>;
 
 /**
  * Uses the MUI 'component' prop to change the root element to be a Next 'Link'.
  */
-const Link = function (props: LinkProps): React.ReactElement {
+export default function Link<RouteType>(
+  props: LinkProps<RouteType>
+): React.ReactElement {
   return <MuiLink component={NextLink} {...props} />;
-};
-
-export default Link;
+}
