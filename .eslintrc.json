@@ -12,16 +12,24 @@
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
     "import/no-anonymous-default-export": "off", // Allow anonymous default exports (used in config files)
-    "@next/next/no-html-link-for-pages": ["error", "app"],
-    "notice/notice": [
-      "error",
-      {
-        "templateFile": "copyright.ts",
-        "onNonMatchingHeader": "replace",
-        "messages": {
-          "whenFailedToMatch": "Couldn't find copyright notice, are you sure you added it?"
-        }
+    "@next/next/no-html-link-for-pages": ["error", "app"]
+  },
+  "overrides": [
+    {
+      "files": ["app/**/*.ts[x]", "lib/**/*.ts[x]"],
+      "rules": {
+        "notice/notice": [
+          "error",
+          {
+            "mustMatch": "Copyright \\(c\\) [0-9]{4} One Handed Ventures, LLC",
+            "templateFile": "copyright.ts",
+            "onNonMatchingHeader": "replace",
+            "messages": {
+              "whenFailedToMatch": "Couldn't find copyright notice, are you sure you added it?"
+            }
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }
