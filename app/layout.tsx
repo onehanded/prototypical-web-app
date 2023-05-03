@@ -6,8 +6,18 @@
  * Root layout of the App.
  */
 import React from 'react';
+import {Metadata} from 'next';
 import EmotionProvider from './components/EmotionContext';
 import ThemeProvider from './components/ThemeContext';
+
+/**
+ * The default metadata for the app.
+ */
+export const metadata: Metadata = {
+  title: 'Prototypical Web Application using Next.js',
+  description:
+    'This web app template is based on React and Next.js for hybrid static & server rendering. It is configured with Typescript, Eslint & Prettier for type safety and code consistency.',
+};
 
 /**
  * Root layout of the App.
@@ -26,10 +36,6 @@ export default function Layout({
 }): React.ReactElement {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
       <body>
         <EmotionProvider>
           <ThemeProvider>{children}</ThemeProvider>
