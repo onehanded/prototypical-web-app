@@ -15,7 +15,7 @@ export default {
    * Runs ESLint & Prettier on Javascript & Typescript files and runs jest
    * limiting code coverage to the staged files.
    */
-  '{app,lib}/**/*.{js,jsx,ts,tsx}': (filenames) => {
+  '{app,components,lib}/**/*.{js,jsx,ts,tsx}': (filenames) => {
     return [
       'eslint --fix ' + filenames.join(' '),
       'prettier --write ' + filenames.join(' '),
@@ -33,16 +33,16 @@ export default {
    * Runs ESLint & Prettier on Javascript & Typescript files in the root
    * directory.
    */
-  './*.{js,mjs,jsx,ts,tsx}': (filenames) => {
+  '*.{js,mjs,ts}': (filenames) => {
     return [
       'eslint --fix ' + filenames.join(' '),
       'prettier --write ' + filenames.join(' '),
     ];
   },
   /*
-   * Runs prettier for JSON files.
+   * Runs prettier for JSON & CSS files.
    */
-  '*.json': (filenames) => {
+  '**/*.{json,css}': (filenames) => {
     return 'prettier --write ' + filenames.join(' ');
   },
 };

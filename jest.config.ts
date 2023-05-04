@@ -19,7 +19,7 @@ export default {
   collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: ['lib/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
+  collectCoverageFrom: ['{app,components,lib}/**/*.{js,jsx,ts,tsx}'],
 
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
@@ -77,7 +77,7 @@ export default {
   // maxWorkers: "50%",
 
   // An array of directory names to be searched recursively up from the requiring module's location
-  moduleDirectories: ['src', 'node_modules'],
+  moduleDirectories: ['app', 'components', 'lib', 'node_modules'],
 
   // An array of file extensions your modules use
   // moduleFileExtensions: [

@@ -9,9 +9,9 @@ It uses [Jest](https://jestjs.io/) and [React Testing Library](https://testing-l
 
 It uses [Husky](https://typicode.github.io/husky/) to run eslint/prettier/jest as a pre-commit hook.
 
-It is configured with [MUI](https://mui.com/) and [Emotion](https://emotion.sh/) as the UI/CSS framework.
+It is configured with [Tailwind CSS](https://tailwindcss.com/) as the CSS framework.
 
-**WARNING: This app uses the Next.js [/app directory](https://nextjs.org/blog/next-13#new-app-directory-beta) that is currently in beta.**
+**WARNING: This app uses the Next.js [/app directory](https://beta.nextjs.org/docs/getting-started) that is currently in beta.**
 
 ## Get started
 
@@ -31,18 +31,9 @@ You can run the linter with `npm run lint`.
 
 It is recommended to set up a linter plugin in your IDE/editor, so you can see all lint errors while writing code and auto-format your code on save.
 
-## MUI/Emotion
+## Building the app
 
-Material UI (MUI) and Emotion CSS do not currently support the new Next.js 13 [/app directory](https://nextjs.org/blog/next-13#new-app-directory-beta).
-
-The components [ThemeContext](app/components/ThemeContext.tsx) and [EmotionContext](app/components/EmotionContext.tsx) bridge between the two worlds:
-
-- The [EmotionContext](app/components/EmotionContext.tsx) component wraps Emotion's CacheProvider component with 'use client', since CacheProvider uses React's context hook.
-- Likewise, the [ThemeContext](app/components/ThemeContext.tsx) component wraps the MUI ThemeProvider component with 'use client'.
-
-Hopefully MUI and Emotion will add support for React Server Components so they can be used directly within server components without being wrapped.
-
-The [Link](app/components/Link.tsx) component bridges between the styled MUI [Link](https://mui.com/material-ui/react-link/) and the Next.js [Link](https://nextjs.org/docs/api-reference/next/link) used for navigation.
+You can use `npm run build` to build a production version of the app.
 
 ## References
 
@@ -50,8 +41,7 @@ The [Link](app/components/Link.tsx) component bridges between the styled MUI [Li
 - [Next.js](https://nextjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Eslint](https://eslint.org/)
-- [MUI](https://mui.com/)
-- [Emotion](https://emotion.sh/)
+- [Tailwind CSS](https://tailwindcss.com/)
 - [Prettier](https://prettier.io/)
 - [Husky](https://typicode.github.io/husky/)
 - [Jest](https://jestjs.io/)

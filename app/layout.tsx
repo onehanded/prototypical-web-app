@@ -7,8 +7,23 @@
  */
 import React from 'react';
 import {Metadata} from 'next';
-import EmotionProvider from './components/EmotionContext';
-import ThemeProvider from './components/ThemeContext';
+import {Roboto} from 'next/font/google';
+
+/*
+ * Import the global styles for the app.
+ */
+import '../styles/globals.css';
+
+/*
+ * Configure the Roboto font.
+ */
+const roboto = Roboto({
+  weight: ['300', '400', '500', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-roboto',
+  fallback: ['Helvetica', 'Arial', 'sans-serif'],
+});
 
 /**
  * The default metadata for the app.
@@ -22,25 +37,17 @@ export const metadata: Metadata = {
 /**
  * Root layout of the App.
  *
- * To ensure proper rendering and touch zooming for all devices the responsive viewport meta tag
- * is added, as per:
- *   https://mui.com/material-ui/getting-started/usage/
- *
  * @param children the children to be rendered
  * @constructor
  */
-export default function Layout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }): React.ReactElement {
   return (
-    <html lang="en">
-      <body>
-        <EmotionProvider>
-          <ThemeProvider>{children}</ThemeProvider>
-        </EmotionProvider>
-      </body>
+    <html lang="en" className={`${roboto.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

@@ -4,17 +4,8 @@
 
 /**
  * Root (home) page of the App.
- *
- * Currently MUI/Emotion components do not work with server-side components:
- *   https://github.com/mui/material-ui/issues/34905
- *   https://github.com/emotion-js/emotion/issues/2928
- *
- * When (if) this is fixed 'use client' can be removed.
  */
-'use client';
-
 import React from 'react';
-import {Box, Container, Link, Typography} from '@mui/material';
 
 /**
  * Root page.
@@ -24,32 +15,23 @@ import {Box, Container, Link, Typography} from '@mui/material';
 export default function Page(): React.ReactElement {
   return (
     <>
-      <Container
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          minHeight: '100vh',
-        }}
-      >
-        <Typography variant="h1">
+      <div className="mx-16 flex h-screen items-center px-6 ">
+        <h1 className="scroll-m-20 text-center text-6xl font-light lg:text-8xl">
           Welcome to the Prototypical Next.js Web App!
-        </Typography>
-      </Container>
-      <Box
-        sx={{
-          position: 'absolute',
-          bottom: '0',
-          pl: 1,
-        }}
-      >
-        <Typography variant="overline">
+        </h1>
+      </div>
+      <div className="absolute bottom-1 pl-1">
+        <p className="text-lighter mx-2 text-sm text-gray-500">
           WARNING: This app uses the Next.js&nbsp;
-          <Link href="https://nextjs.org/blog/next-13#new-app-directory-beta">
-            /app directory
-          </Link>
-          &nbsp;that is currently in beta.
-        </Typography>
-      </Box>
+          <a
+            href="https://beta.nextjs.org/docs/getting-started"
+            className="text-blue-400 hover:text-blue-600"
+          >
+            /app
+          </a>
+          &nbsp; directory that is currently in beta.
+        </p>
+      </div>
     </>
   );
 }
