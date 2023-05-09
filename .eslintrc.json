@@ -16,7 +16,7 @@
   },
   "overrides": [
     {
-      "files": ["{app,components,lib}/**/*.{ts,tsx}"],
+      "files": ["{app,components,lib,pages}/**/*.{ts,tsx}"],
       "rules": {
         "notice/notice": [
           "error",

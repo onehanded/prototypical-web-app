@@ -11,7 +11,7 @@ It uses [Husky](https://typicode.github.io/husky/) to run eslint/prettier/jest a
 
 It is configured with [Tailwind CSS](https://tailwindcss.com/) as the CSS framework.
 
-**WARNING: This app uses the Next.js [/app directory](https://beta.nextjs.org/docs/getting-started) that is currently in beta.**
+**NOTICE: This app uses the Next.js /app directory.**
 
 ## Get started
 
