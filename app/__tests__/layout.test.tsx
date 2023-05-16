@@ -29,6 +29,10 @@ describe('Layout', () => {
    *
    */
   test('it renders children', () => {
+    // Since the Layout component renders the <html> tag it will generate an
+    // console error, so we need to mock it to suppress the error output.
+    const error = jest.spyOn(console, 'error').mockReturnValueOnce(undefined);
+
     const {getByText} = render(
       <Layout>
         <p>Hello World</p>
@@ -39,5 +43,7 @@ describe('Layout', () => {
     );
 
     expect(getByText(/hello/i)).toBeInTheDocument();
+
+    expect(error).toHaveBeenCalledTimes(1);
   });
 });
