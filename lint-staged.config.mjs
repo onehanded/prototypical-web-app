@@ -16,6 +16,10 @@ export default {
    * limiting code coverage to the staged files.
    */
   '{app,components,lib,pages}/**/*.{js,jsx,ts,tsx}': (filenames) => {
+    if (filenames.length === 0) {
+      return [];
+    }
+
     return [
       'eslint --fix ' + filenames.join(' '),
       'prettier --write ' + filenames.join(' '),
